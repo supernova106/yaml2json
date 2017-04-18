@@ -1,0 +1,404 @@
+{
+ "servers": [
+  {
+   "alias": "None", 
+   "host": "machine11.yourdomain.com", 
+   "port": 5400, 
+   "queries": [
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "memorypool", 
+     "obj": "java.lang:type=MemoryPool,name=*", 
+     "attr": [
+      "Usage"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "gc", 
+     "obj": "java.lang:type=GarbageCollector,name=*", 
+     "attr": [
+      "CollectionCount", 
+      "CollectionTime"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "hibernate", 
+     "obj": "Hibernate:type=statistics,name=*", 
+     "attr": [
+      "QueryExecutionMaxTime", 
+      "Queries", 
+      "TransactionCount"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "sys", 
+     "obj": "java.lang:type=OperatingSystem", 
+     "attr": [
+      "SystemLoadAverage", 
+      "AvailableProcessors", 
+      "TotalPhysicalMemorySize", 
+      "FreePhysicalMemorySize", 
+      "TotalSwapSpaceSize", 
+      "FreeSwapSpaceSize", 
+      "OpenFileDescriptorCount", 
+      "MaxFileDescriptorCount"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "threads", 
+     "obj": "java.lang:type=Threading", 
+     "attr": [
+      "DaemonThreadCount", 
+      "PeakThreadCount", 
+      "ThreadCount", 
+      "TotalStartedThreadCount"
+     ]
+    }
+   ]
+  }, 
+  {
+   "alias": "None", 
+   "host": "machine12.yourdomain.com", 
+   "port": 5400, 
+   "queries": [
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "memorypool", 
+     "obj": "java.lang:type=MemoryPool,name=*", 
+     "attr": [
+      "Usage"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "gc", 
+     "obj": "java.lang:type=GarbageCollector,name=*", 
+     "attr": [
+      "CollectionCount", 
+      "CollectionTime"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "hibernate", 
+     "obj": "Hibernate:type=statistics,name=*", 
+     "attr": [
+      "QueryExecutionMaxTime", 
+      "Queries", 
+      "TransactionCount"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "sys", 
+     "obj": "java.lang:type=OperatingSystem", 
+     "attr": [
+      "SystemLoadAverage", 
+      "AvailableProcessors", 
+      "TotalPhysicalMemorySize", 
+      "FreePhysicalMemorySize", 
+      "TotalSwapSpaceSize", 
+      "FreeSwapSpaceSize", 
+      "OpenFileDescriptorCount", 
+      "MaxFileDescriptorCount"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "threads", 
+     "obj": "java.lang:type=Threading", 
+     "attr": [
+      "DaemonThreadCount", 
+      "PeakThreadCount", 
+      "ThreadCount", 
+      "TotalStartedThreadCount"
+     ]
+    }
+   ]
+  }, 
+  {
+   "alias": "None", 
+   "host": "machine13.yourdomain.com", 
+   "port": 5400, 
+   "queries": [
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "memorypool", 
+     "obj": "java.lang:type=MemoryPool,name=*", 
+     "attr": [
+      "Usage"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "gc", 
+     "obj": "java.lang:type=GarbageCollector,name=*", 
+     "attr": [
+      "CollectionCount", 
+      "CollectionTime"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "hibernate", 
+     "obj": "Hibernate:type=statistics,name=*", 
+     "attr": [
+      "QueryExecutionMaxTime", 
+      "Queries", 
+      "TransactionCount"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "sys", 
+     "obj": "java.lang:type=OperatingSystem", 
+     "attr": [
+      "SystemLoadAverage", 
+      "AvailableProcessors", 
+      "TotalPhysicalMemorySize", 
+      "FreePhysicalMemorySize", 
+      "TotalSwapSpaceSize", 
+      "FreeSwapSpaceSize", 
+      "OpenFileDescriptorCount", 
+      "MaxFileDescriptorCount"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "threads", 
+     "obj": "java.lang:type=Threading", 
+     "attr": [
+      "DaemonThreadCount", 
+      "PeakThreadCount", 
+      "ThreadCount", 
+      "TotalStartedThreadCount"
+     ]
+    }
+   ]
+  }, 
+  {
+   "alias": "None", 
+   "host": "machine14.yourdomain.com", 
+   "port": 5400, 
+   "queries": [
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "memorypool", 
+     "obj": "java.lang:type=MemoryPool,name=*", 
+     "attr": [
+      "Usage"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "gc", 
+     "obj": "java.lang:type=GarbageCollector,name=*", 
+     "attr": [
+      "CollectionCount", 
+      "CollectionTime"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "hibernate", 
+     "obj": "Hibernate:type=statistics,name=*", 
+     "attr": [
+      "QueryExecutionMaxTime", 
+      "Queries", 
+      "TransactionCount"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "sys", 
+     "obj": "java.lang:type=OperatingSystem", 
+     "attr": [
+      "SystemLoadAverage", 
+      "AvailableProcessors", 
+      "TotalPhysicalMemorySize", 
+      "FreePhysicalMemorySize", 
+      "TotalSwapSpaceSize", 
+      "FreeSwapSpaceSize", 
+      "OpenFileDescriptorCount", 
+      "MaxFileDescriptorCount"
+     ]
+    }, 
+    {
+     "outputWriters": [
+      {
+       "url": "http://influxdb.yourdomain.com:2003/", 
+       "username": "admin", 
+       "password": "admin", 
+       "@class": "com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory", 
+       "database": "jmxDB"
+      }
+     ], 
+     "resultAlias": "threads", 
+     "obj": "java.lang:type=Threading", 
+     "attr": [
+      "DaemonThreadCount", 
+      "PeakThreadCount", 
+      "ThreadCount", 
+      "TotalStartedThreadCount"
+     ]
+    }
+   ]
+  }
+ ]
+}

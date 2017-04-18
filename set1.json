@@ -1,0 +1,548 @@
+{
+ "servers": [
+  {
+   "numQueryThreads": 5, 
+   "alias": "None", 
+   "host": "machine01.yourdomain.com", 
+   "port": 5400, 
+   "queries": [
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "Usage"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "memorypool", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=MemoryPool,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "CollectionCount", 
+      "CollectionTime"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "gc", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=GarbageCollector,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "QueryExecutionMaxTime", 
+      "Queries", 
+      "TransactionCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "hibernate", 
+     "useAllTypeNames": null, 
+     "obj": "Hibernate:type=statistics,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "SystemLoadAverage", 
+      "AvailableProcessors", 
+      "TotalPhysicalMemorySize", 
+      "FreePhysicalMemorySize", 
+      "TotalSwapSpaceSize", 
+      "FreeSwapSpaceSize", 
+      "OpenFileDescriptorCount", 
+      "MaxFileDescriptorCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "sys", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=OperatingSystem"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "DaemonThreadCount", 
+      "PeakThreadCount", 
+      "ThreadCount", 
+      "TotalStartedThreadCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "threads", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=Threading"
+    }
+   ]
+  }, 
+  {
+   "numQueryThreads": 5, 
+   "alias": "None", 
+   "host": "machine02.yourdomain.com", 
+   "port": 5400, 
+   "queries": [
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "Usage"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "memorypool", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=MemoryPool,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "CollectionCount", 
+      "CollectionTime"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "gc", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=GarbageCollector,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "QueryExecutionMaxTime", 
+      "Queries", 
+      "TransactionCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "hibernate", 
+     "useAllTypeNames": null, 
+     "obj": "Hibernate:type=statistics,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "SystemLoadAverage", 
+      "AvailableProcessors", 
+      "TotalPhysicalMemorySize", 
+      "FreePhysicalMemorySize", 
+      "TotalSwapSpaceSize", 
+      "FreeSwapSpaceSize", 
+      "OpenFileDescriptorCount", 
+      "MaxFileDescriptorCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "sys", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=OperatingSystem"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "DaemonThreadCount", 
+      "PeakThreadCount", 
+      "ThreadCount", 
+      "TotalStartedThreadCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "threads", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=Threading"
+    }
+   ]
+  }, 
+  {
+   "numQueryThreads": 5, 
+   "alias": "None", 
+   "host": "machine03.yourdomain.com", 
+   "port": 5400, 
+   "queries": [
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "Usage"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "memorypool", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=MemoryPool,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "CollectionCount", 
+      "CollectionTime"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "gc", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=GarbageCollector,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "QueryExecutionMaxTime", 
+      "Queries", 
+      "TransactionCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "hibernate", 
+     "useAllTypeNames": null, 
+     "obj": "Hibernate:type=statistics,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "SystemLoadAverage", 
+      "AvailableProcessors", 
+      "TotalPhysicalMemorySize", 
+      "FreePhysicalMemorySize", 
+      "TotalSwapSpaceSize", 
+      "FreeSwapSpaceSize", 
+      "OpenFileDescriptorCount", 
+      "MaxFileDescriptorCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "sys", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=OperatingSystem"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "DaemonThreadCount", 
+      "PeakThreadCount", 
+      "ThreadCount", 
+      "TotalStartedThreadCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "threads", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=Threading"
+    }
+   ]
+  }, 
+  {
+   "numQueryThreads": 5, 
+   "alias": "None", 
+   "host": "machine04.yourdomain.com", 
+   "port": 5400, 
+   "queries": [
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "Usage"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "memorypool", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=MemoryPool,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "CollectionCount", 
+      "CollectionTime"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "gc", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=GarbageCollector,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "QueryExecutionMaxTime", 
+      "Queries", 
+      "TransactionCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "hibernate", 
+     "useAllTypeNames": null, 
+     "obj": "Hibernate:type=statistics,name=*"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "SystemLoadAverage", 
+      "AvailableProcessors", 
+      "TotalPhysicalMemorySize", 
+      "FreePhysicalMemorySize", 
+      "TotalSwapSpaceSize", 
+      "FreeSwapSpaceSize", 
+      "OpenFileDescriptorCount", 
+      "MaxFileDescriptorCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "sys", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=OperatingSystem"
+    }, 
+    {
+     "allowDottedKeys": null, 
+     "attr": [
+      "DaemonThreadCount", 
+      "PeakThreadCount", 
+      "ThreadCount", 
+      "TotalStartedThreadCount"
+     ], 
+     "outputWriters": [
+      {
+       "@class": "com.googlecode.jmxtrans.model.output.GraphiteWriter", 
+       "settings": {
+        "typeNames": [
+         "name"
+        ], 
+        "host": "graphite.yourdomain.com", 
+        "port": 2003, 
+        "rootPrefix": "servers"
+       }
+      }
+     ], 
+     "useObjDomainAsKey": null, 
+     "resultAlias": "threads", 
+     "useAllTypeNames": null, 
+     "obj": "java.lang:type=Threading"
+    }
+   ]
+  }
+ ]
+}

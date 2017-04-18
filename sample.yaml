@@ -1,0 +1,91 @@
+# Host/Port Grahpite listens on
+graphite_host: "graphite.yourdomain.com"
+graphite_port: 2003
+
+# InfluxDB configuration
+influxdb_host: "influxdb.yourdomain.com"
+influxdb_port: 2003
+influxdb_database: jmxDB
+influxdb_username: admin
+influxdb_password: admin
+
+# Global port to query JMX on
+# query_port and global_host_alias are mandatory
+# Will accept a blank space if alias and host is provided in host sets
+query_port: 5400
+global_host_alias: 
+
+# Query definitions, every query needs obj, resultAlias, attr
+#   from jmxtrans format, "name" must be given for referencing
+#   the query in host sets
+queries:
+    - name: mempool
+      obj: "java.lang:type=MemoryPool,name=*"
+      resultAlias: "memorypool"
+      attr:
+        - "Usage"
+    - name: gc
+      obj: "java.lang:type=GarbageCollector,name=*"
+      resultAlias: "gc"
+      attr:
+        - "CollectionCount"
+        - "CollectionTime"
+    - name: hibernate
+      obj: "Hibernate:type=statistics,name=*"
+      resultAlias: "hibernate"
+      attr:
+        - "QueryExecutionMaxTime"
+        - "Queries"
+        - "TransactionCount"
+    - name: sys
+      obj: "java.lang:type=OperatingSystem"
+      resultAlias: "sys"
+      attr:
+        - "SystemLoadAverage"
+        - "AvailableProcessors"
+        - "TotalPhysicalMemorySize"
+        - "FreePhysicalMemorySize"
+        - "TotalSwapSpaceSize"
+        - "FreeSwapSpaceSize"
+        - "OpenFileDescriptorCount"
+        - "MaxFileDescriptorCount"
+    - name: threads
+      obj : "java.lang:type=Threading"
+      resultAlias: "threads"
+      attr:
+        - "DaemonThreadCount"
+        - "PeakThreadCount"
+        - "ThreadCount"
+        - "TotalStartedThreadCount"
+
+# Define named sets of hosts that get the same queries
+# query_names and hosts is a list
+# Mention like machine01.yourdomain.com:5400;mac1
+# if query_port and global_host_alias are not specified
+sets:
+  - setname: set1
+    output_type: graphite
+    query_names:
+            - mempool
+            - gc
+            - hibernate
+            - sys
+            - threads
+    hosts:
+            - machine01.yourdomain.com
+            - machine02.yourdomain.com
+            - machine03.yourdomain.com
+            - machine04.yourdomain.com
+  - setname: set2
+    output_type: influxdb
+    query_names:
+            - mempool
+            - gc
+            - hibernate
+            - sys
+            - threads
+    hosts:
+            - machine11.yourdomain.com
+            - machine12.yourdomain.com
+            - machine13.yourdomain.com
+            - machine14.yourdomain.com
