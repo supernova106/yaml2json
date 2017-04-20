@@ -161,6 +161,7 @@ class Queries(object):
                 'url' : 'http://'+str(self.monitor_host)+':'+str(self.monitor_port)+'/',
                 'username' : self.monitor_username,
                 'password' : self.monitor_password,
+                'retentionPolicy': 'autogen',
                 'database' : self.monitor_database
             } ]
         
